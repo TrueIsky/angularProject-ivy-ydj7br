@@ -1,0 +1,25 @@
+<p *ngIf="chats.length == 0">No chats</p>
+<div *ngFor="let chat of chats">
+  <h3>
+    Chat from {{ chat.history[0].time | date : 'short' }} with {{ chat.user }}
+  </h3>
+  <div *ngFor="let message of chat.history">
+    <div
+      [ngClass]="{
+        me: message.sender === 'Me',
+        reciever: message.sender !== 'Me'
+      }"
+    >
+      <p>
+        <b>{{ message.sender }}</b>
+      </p>
+      <p>{{ message.message }}</p>
+      <p>
+        <i>{{ message.time | date : 'short' }}</i>
+      </p>
+    </div>
+    <br />
+  </div>
+  <br />
+  <br />
+</div>

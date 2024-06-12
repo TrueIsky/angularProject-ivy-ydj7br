@@ -1,0 +1,15 @@
+<ul>
+  <li *ngFor="let user of users; index as i">
+    <button (click)="openIt(user.id)">
+      {{ user.firstName }} {{ user.lastName }} {{ user.email }}
+    </button>
+    <br />
+    <button *ngIf="selectedUserId == user.id" (click)="showDetail()">
+      Zobraz detail
+    </button>
+    <button *ngIf="selectedUserId == user.id" (click)="startChat()">
+      Začni chat
+    </button>
+    <br *ngIf="selectedUserId == user.id" />
+  </li>
+</ul>

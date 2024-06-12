@@ -1,0 +1,17 @@
+<div class="container">
+  <header>
+    <h1>Welcome {{ loggedUser.firstName }} {{ loggedUser.lastName }}</h1>
+    <button (click)="logout($event)">Logout</button> <br />
+    Clicks: {{ statsService.clicks }} <br />
+    Chats: {{ statsService.numberOfChats }} <br />
+    Characters: {{ statsService.characters }} <br />
+    Login Time: {{ statsService.loginTime | date : 'short' }}
+  </header>
+  <main>
+    <div class="border">
+      <app-user-list></app-user-list>
+    </div>
+    <div class="border"><router-outlet name="middle"></router-outlet></div>
+    <div><router-outlet name="right"></router-outlet></div>
+  </main>
+</div>

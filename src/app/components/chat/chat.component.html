@@ -1,0 +1,29 @@
+<div class="border">
+  <div *ngFor="let message of chatService.currentChat">
+    <div
+      [ngClass]="{
+        'me': message.sender === 'Me',
+        'reciever': message.sender !== 'Me'
+      }"
+    >
+      <p>
+        <b>{{ message.sender }}</b>
+      </p>
+      <p>{{ message.message }}</p>
+      <p>
+        <i>{{ message.time | date : 'short' }}</i>
+      </p>
+      <br />
+    </div>
+  </div>
+
+  <textarea
+    [(ngModel)]="newMessage"
+    cols="20"
+    rows="2"
+    (keydown.enter)="onSubmit()"
+  ></textarea>
+  <br />
+  <button class="button" (click)="onSubmit()">Send</button>
+  <button class="button" (click)="endChat()">End Chat</button>
+</div>

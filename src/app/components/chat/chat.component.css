@@ -1,0 +1,17 @@
+.border {
+  border: solid black 2px;
+  margin: 10px;
+  padding: 10px;
+}
+
+.me {
+  text-align: right;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.reciever {
+  text-align: left;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}

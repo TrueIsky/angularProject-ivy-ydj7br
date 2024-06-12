@@ -1,0 +1,11 @@
+.me {
+  text-align: right;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.reciever {
+  text-align: left;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}

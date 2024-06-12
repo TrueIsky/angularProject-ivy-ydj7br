@@ -1,0 +1,19 @@
+<ul>
+  <img src="{{ user.image }}" alt="" />
+  <li>First Name: {{ user.firstName }}</li>
+  <li>Last Name: {{ user.lastName }}</li>
+  <li>email: {{ user.email }}</li>
+  <li>username: {{ user.username }}</li>
+  <li>birthdate {{ user.birthDate }}</li>
+  <li>Eye Color: {{ user.eyeColor }}</li>
+  <li>age: {{ user.age }}</li>
+  <li>Mac Address: {{ user.macAdress }}</li>
+  <li>ip address: {{ user.ip }}</li>
+  <li>city: {{ user.city }}</li>
+  <li>postal code: {{ user.postalCode }}</li>
+
+  <li>counry: {{ user.userCountry }}</li>
+  <li>gender: {{ user.userGender }}</li>
+</ul>
+
+<button (click)="hide()">Hide detail</button>
